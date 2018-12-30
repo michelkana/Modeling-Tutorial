@@ -1,0 +1,30 @@
+********** EXPERIMENT NAME
+example experiment
+
+********** EXPERIMENT NOTES
+just an example experiment 
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+X1(0) = 100                               
+X2(0) = 0                                 
+X3(0) = 0                                 
+X4(0) = 0
+k12 = 0.9                                 
+k21 = 0.2                                 
+k23 = 0.6                                 
+k32 = 0.4                                 
+k34 = 0.5                                 
+k44 = 0.9
+v1 = 5
+
+********** EXPERIMENT PARAMETER CHANGES
+% In this section parameter changes can be defined that are evaluated during
+% the merged models evaluation
+
+
+
+********** EXPERIMENT STATE CHANGES
+% State changes in the experiment description can only be done at certain 
+% time points yet. This will probably also change in a coming revision.
+
+

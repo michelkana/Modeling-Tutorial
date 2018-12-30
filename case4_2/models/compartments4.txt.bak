@@ -1,0 +1,41 @@
+********** MODEL NAME
+pharma_4_compartments
+
+********** MODEL NOTES
+
+
+********** MODEL STATES
+d/dt(X1) = -k12*X1 + k21*X2               
+d/dt(X2) = k12*X1 + (-k21-k23)*X2 + k32*X3
+d/dt(X3) = k23*X2 + (-k32-k34)*X3         
+d/dt(X4) = k34*X3 - k44*X4    
+Y1(time) = X1(time)/v1
+           
+X1(0) = 100                               
+X2(0) = 0                                 
+X3(0) = 0                                 
+X4(0) = 0
+
+********** MODEL PARAMETERS
+k12 = 0.9                                 
+k21 = 0.2                                 
+k23 = 0.6                                 
+k32 = 0.4                                 
+k34 = 0.5                                 
+k44 = 0.9
+v1 = 5
+
+********** MODEL VARIABLES
+
+
+********** MODEL REACTIONS
+
+
+********** MODEL FUNCTIONS
+
+
+********** MODEL EVENTS
+
+
+********** MODEL MATLAB FUNCTIONS
+

@@ -1,0 +1,17 @@
+[Name]
+blood concentration and amounts
+
+[Notes]
+
+[Components]
+time,Y1,X2,X3,X4
+
+[Componentnotes]
+
+[Values]
+0,20,0,0,0
+2,10,40,22,5
+6,3,20,18,10
+10,2,15,10,5
+20,0.1,0.2,0.3,0.4
+

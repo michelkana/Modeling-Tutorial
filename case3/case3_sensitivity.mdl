@@ -1,0 +1,5143 @@
+Model {
+  Name			  "case3_sensitivity"
+  Version		  6.6
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.36"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Thu Nov 20 00:15:49 2008"
+  Creator		  "MXKana"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "mxkana"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun Sep 27 12:45:04 2009"
+  ModelVersionFormat	  "1.%<AutoIncrement:36>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  AccelVerboseBuild	  off
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.2.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.2.0"
+	  StartTime		  "0.0"
+	  StopTime		  "36"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.2.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.2.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.2.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.2.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlComp"
+"liant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Fcn
+      Expr		      "sin(u[1])"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "case3_sensitivity"
+    Location		    [66, 74, 1109, 699]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "K12"
+      Position		      [173, 50, 227, 75]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      Value		      "0.2259"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "K13"
+      Position		      [341, 50, 399, 75]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      Value		      "0.050587"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "K21"
+      Position		      [260, 50, 310, 75]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      Value		      "1e-005"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "K22"
+      Position		      [511, 50, 539, 75]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "K31"
+      Position		      [432, 50, 478, 75]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      Value		      "0.027425"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [6, 1]
+      Position		      [165, 473, 175, 547]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Inputs		      "6"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [6, 1]
+      Position		      [165, 558, 175, 632]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Inputs		      "6"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      Ports		      [6, 1]
+      Position		      [165, 643, 175, 717]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Inputs		      "6"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux3"
+      Ports		      [6, 1]
+      Position		      [165, 728, 175, 802]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Inputs		      "6"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux4"
+      Ports		      [4, 1]
+      Position		      [100, 393, 110, 467]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sensitivity K12"
+      Ports		      [7, 4]
+      Position		      [461, 370, 609, 465]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Sensitivity K12"
+	Location		[250, 76, 1216, 597]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V1"
+	  Position		  [675, 193, 705, 207]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K12"
+	  Position		  [165, 133, 195, 147]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K21"
+	  Position		  [95, 303, 125, 317]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K13"
+	  Position		  [230, 173, 260, 187]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K31"
+	  Position		  [290, 473, 320, 487]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K22"
+	  Position		  [295, 338, 325, 352]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X1"
+	  Position		  [15, 273, 45, 287]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [4, 1]
+	  Position		  [510, 91, 540, 139]
+	  Inputs		  "+-++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [2, 1]
+	  Position		  [305, 131, 335, 164]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  Ports			  [3, 1]
+	  Position		  [485, 263, 515, 297]
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add3"
+	  Ports			  [2, 1]
+	  Position		  [355, 301, 385, 334]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add4"
+	  Ports			  [2, 1]
+	  Position		  [480, 431, 510, 464]
+	  Inputs		  "+-"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide1"
+	  Ports			  [2, 1]
+	  Position		  [750, 177, 780, 208]
+	  Inputs		  "*/"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1]
+	  Position		  [560, 100, 590, 130]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Ports			  [1, 1]
+	  Position		  [555, 265, 585, 295]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Ports			  [1, 1]
+	  Position		  [565, 435, 595, 465]
+	  IgnoreLimit		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "X3"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "P4"
+	  Ports			  [2, 1]
+	  Position		  [257, 215, 288, 245]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [370, 142, 400, 173]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [410, 232, 440, 263]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [420, 312, 450, 343]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [370, 52, 400, 83]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  Ports			  [2, 1]
+	  Position		  [375, 472, 405, 503]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda21"
+	  Position		  [760, 108, 790, 122]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda22"
+	  Position		  [685, 273, 715, 287]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda23"
+	  Position		  [670, 443, 700, 457]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Eta21"
+	  Position		  [830, 188, 860, 202]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K13"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "Add1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "P4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 85; -260, 0]
+	    Branch {
+	      Points		      [0, 40]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -35]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "P4"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [125, 0]
+	    Branch {
+	      DstBlock		      "Lambda21"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Divide1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K21"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Add3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -235]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K22"
+	  SrcPort		  1
+	  Points		  [0, -20]
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add3"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 85; -225, 0]
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -250; -275, 0]
+	    DstBlock		    "Product3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Lambda22"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add4"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K31"
+	  SrcPort		  1
+	  DstBlock		  "Product4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P4"
+	  SrcPort		  1
+	  Points		  [0, 190]
+	  DstBlock		  "Add4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -35]
+	  Branch {
+	    DstBlock		    "Add4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [-335, 0; 0, -335]
+	    DstBlock		    "Add"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "X3"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [-10, 0; 0, 75; -270, 0]
+	    DstBlock		    "Product4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Lambda23"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 30]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V1"
+	  SrcPort		  1
+	  DstBlock		  "Divide1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "X1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Points		    [0, -170]
+	    DstBlock		    "Add"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Add2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Divide1"
+	  SrcPort		  1
+	  DstBlock		  "Eta21"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -40]
+	  DstBlock		  "Add2"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sensitivity K13"
+      Ports		      [7, 4]
+      Position		      [891, 370, 1039, 465]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Sensitivity K13"
+	Location		[250, 74, 1216, 595]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V1"
+	  Position		  [675, 193, 705, 207]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K12"
+	  Position		  [165, 133, 195, 147]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K21"
+	  Position		  [95, 303, 125, 317]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K13"
+	  Position		  [230, 173, 260, 187]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K31"
+	  Position		  [290, 473, 320, 487]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K22"
+	  Position		  [295, 338, 325, 352]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X1"
+	  Position		  [15, 438, 45, 452]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [4, 1]
+	  Position		  [510, 91, 540, 139]
+	  Inputs		  "+-++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [2, 1]
+	  Position		  [305, 131, 335, 164]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  Ports			  [2, 1]
+	  Position		  [485, 260, 515, 295]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add3"
+	  Ports			  [2, 1]
+	  Position		  [355, 301, 385, 334]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add4"
+	  Ports			  [3, 1]
+	  Position		  [480, 428, 510, 462]
+	  Inputs		  "++-"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide1"
+	  Ports			  [2, 1]
+	  Position		  [750, 177, 780, 208]
+	  Inputs		  "*/"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1]
+	  Position		  [560, 100, 590, 130]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Ports			  [1, 1]
+	  Position		  [555, 265, 585, 295]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Ports			  [1, 1]
+	  Position		  [565, 430, 595, 460]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "P4"
+	  Ports			  [2, 1]
+	  Position		  [257, 215, 288, 245]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [370, 142, 400, 173]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [410, 232, 440, 263]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [420, 312, 450, 343]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [370, 52, 400, 83]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  Ports			  [2, 1]
+	  Position		  [375, 472, 405, 503]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda41"
+	  Position		  [760, 108, 790, 122]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda42"
+	  Position		  [685, 273, 715, 287]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda43"
+	  Position		  [670, 438, 700, 452]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Eta41"
+	  Position		  [830, 188, 860, 202]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K13"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "Add1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "P4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 85; -260, 0]
+	    Branch {
+	      Points		      [0, 40]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -35]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "P4"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [125, 0]
+	    Branch {
+	      DstBlock		      "Lambda41"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Divide1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K21"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Add3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -235]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K22"
+	  SrcPort		  1
+	  Points		  [0, -20]
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add3"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 85; -225, 0]
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -250; -275, 0]
+	    DstBlock		    "Product3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Lambda42"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add4"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K31"
+	  SrcPort		  1
+	  DstBlock		  "Product4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P4"
+	  SrcPort		  1
+	  Points		  [0, 185]
+	  DstBlock		  "Add4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -35]
+	  Branch {
+	    Points		    [-335, 0; 0, -335]
+	    DstBlock		    "Add"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Add4"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [40, 0; -10, 0]
+	  Branch {
+	    Points		    [0, 5; 0, 75; -270, 0]
+	    DstBlock		    "Product4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Lambda43"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 30]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V1"
+	  SrcPort		  1
+	  DstBlock		  "Divide1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "X1"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 0]
+	  Branch {
+	    Points		    [0, -335]
+	    DstBlock		    "Add"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 0]
+	    DstBlock		    "Add4"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Divide1"
+	  SrcPort		  1
+	  DstBlock		  "Eta41"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -45]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sensitivity K21"
+      Ports		      [7, 4]
+      Position		      [676, 370, 824, 465]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Sensitivity K21"
+	Location		[250, 74, 1216, 595]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V1"
+	  Position		  [675, 193, 705, 207]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K12"
+	  Position		  [165, 133, 195, 147]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K21"
+	  Position		  [95, 303, 125, 317]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K13"
+	  Position		  [230, 173, 260, 187]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K31"
+	  Position		  [290, 473, 320, 487]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K22"
+	  Position		  [295, 338, 325, 352]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X2"
+	  Position		  [15, 273, 45, 287]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [4, 1]
+	  Position		  [510, 91, 540, 139]
+	  Inputs		  "++++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [2, 1]
+	  Position		  [305, 131, 335, 164]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  Ports			  [3, 1]
+	  Position		  [485, 263, 515, 297]
+	  Inputs		  "+-+"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add3"
+	  Ports			  [2, 1]
+	  Position		  [355, 301, 385, 334]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add4"
+	  Ports			  [2, 1]
+	  Position		  [480, 431, 510, 464]
+	  Inputs		  "+-"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide1"
+	  Ports			  [2, 1]
+	  Position		  [750, 177, 780, 208]
+	  Inputs		  "*/"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1]
+	  Position		  [560, 100, 590, 130]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Ports			  [1, 1]
+	  Position		  [555, 265, 585, 295]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Ports			  [1, 1]
+	  Position		  [565, 435, 595, 465]
+	  IgnoreLimit		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "X3"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "P4"
+	  Ports			  [2, 1]
+	  Position		  [257, 215, 288, 245]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [370, 142, 400, 173]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [410, 232, 440, 263]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [420, 312, 450, 343]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [370, 52, 400, 83]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  Ports			  [2, 1]
+	  Position		  [375, 472, 405, 503]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda31"
+	  Position		  [760, 108, 790, 122]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda32"
+	  Position		  [685, 273, 715, 287]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda33"
+	  Position		  [670, 443, 700, 457]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Eta31"
+	  Position		  [830, 188, 860, 202]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K13"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "Add1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "P4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 85; -260, 0]
+	    Branch {
+	      Points		      [0, 40]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -35]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "P4"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [125, 0]
+	    Branch {
+	      DstBlock		      "Lambda31"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Divide1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K21"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Add3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -235]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K22"
+	  SrcPort		  1
+	  Points		  [0, -20]
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add3"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 85; -225, 0]
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -250; -280, 0; 0, 30]
+	    DstBlock		    "Product3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Lambda32"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add4"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K31"
+	  SrcPort		  1
+	  DstBlock		  "Product4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P4"
+	  SrcPort		  1
+	  Points		  [0, 190]
+	  DstBlock		  "Add4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -35]
+	  Branch {
+	    DstBlock		    "Add4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [-335, 0; 0, -335]
+	    DstBlock		    "Add"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "X3"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [-10, 0; 0, 75; -270, 0]
+	    DstBlock		    "Product4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Lambda33"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 30]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V1"
+	  SrcPort		  1
+	  DstBlock		  "Divide1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "X2"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    Points		    [0, -170]
+	    DstBlock		    "Add"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Add2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Divide1"
+	  SrcPort		  1
+	  DstBlock		  "Eta31"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -40]
+	  DstBlock		  "Add2"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sensitivity K22"
+      Ports		      [7, 4]
+      Position		      [1326, 370, 1474, 465]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Sensitivity K22"
+	Location		[250, 74, 1216, 595]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V1"
+	  Position		  [675, 193, 705, 207]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K12"
+	  Position		  [165, 133, 195, 147]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K21"
+	  Position		  [95, 303, 125, 317]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K13"
+	  Position		  [230, 173, 260, 187]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K31"
+	  Position		  [290, 473, 320, 487]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K22"
+	  Position		  [295, 338, 325, 352]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X2"
+	  Position		  [305, 273, 335, 287]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [3, 1]
+	  Position		  [510, 91, 540, 139]
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [2, 1]
+	  Position		  [305, 131, 335, 164]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  Ports			  [3, 1]
+	  Position		  [485, 262, 515, 298]
+	  Inputs		  "+-+"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add3"
+	  Ports			  [2, 1]
+	  Position		  [355, 301, 385, 334]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add4"
+	  Ports			  [2, 1]
+	  Position		  [480, 430, 510, 465]
+	  Inputs		  "+-"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide1"
+	  Ports			  [2, 1]
+	  Position		  [750, 177, 780, 208]
+	  Inputs		  "*/"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1]
+	  Position		  [560, 100, 590, 130]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Ports			  [1, 1]
+	  Position		  [555, 265, 585, 295]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Ports			  [1, 1]
+	  Position		  [565, 430, 595, 460]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "P4"
+	  Ports			  [2, 1]
+	  Position		  [257, 215, 288, 245]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [370, 142, 400, 173]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [410, 232, 440, 263]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [420, 312, 450, 343]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [370, 52, 400, 83]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  Ports			  [2, 1]
+	  Position		  [375, 472, 405, 503]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda61"
+	  Position		  [760, 108, 790, 122]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda62"
+	  Position		  [685, 273, 715, 287]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda63"
+	  Position		  [670, 438, 700, 452]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Eta61"
+	  Position		  [830, 188, 860, 202]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K13"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "Add1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "P4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 85; -260, 0]
+	    Branch {
+	      Points		      [0, 40]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -35]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "P4"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [125, 0]
+	    Branch {
+	      DstBlock		      "Lambda61"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Divide1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K21"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Add3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -235]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K22"
+	  SrcPort		  1
+	  Points		  [0, -20]
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add3"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 85; -225, 0]
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -255; -275, 0]
+	    DstBlock		    "Product3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Lambda62"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add4"
+	  SrcPort		  1
+	  Points		  [0, -5]
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K31"
+	  SrcPort		  1
+	  DstBlock		  "Product4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P4"
+	  SrcPort		  1
+	  Points		  [0, 190]
+	  DstBlock		  "Add4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -35]
+	  Branch {
+	    DstBlock		    "Add4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [-335, 0; 0, -340]
+	    DstBlock		    "Add"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [40, 0; -10, 0]
+	  Branch {
+	    Points		    [0, 5; 0, 75; -270, 0]
+	    DstBlock		    "Product4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Lambda63"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 30]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V1"
+	  SrcPort		  1
+	  DstBlock		  "Divide1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Divide1"
+	  SrcPort		  1
+	  DstBlock		  "Eta61"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -40]
+	  DstBlock		  "Add2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "X2"
+	  SrcPort		  1
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sensitivity K31"
+      Ports		      [7, 4]
+      Position		      [1106, 370, 1254, 465]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Sensitivity K31"
+	Location		[250, 74, 1216, 595]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V1"
+	  Position		  [675, 193, 705, 207]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K12"
+	  Position		  [165, 133, 195, 147]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K21"
+	  Position		  [95, 303, 125, 317]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K13"
+	  Position		  [230, 173, 260, 187]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K31"
+	  Position		  [290, 473, 320, 487]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K22"
+	  Position		  [295, 338, 325, 352]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X3"
+	  Position		  [15, 438, 45, 452]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [4, 1]
+	  Position		  [510, 91, 540, 139]
+	  Inputs		  "++++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [2, 1]
+	  Position		  [305, 131, 335, 164]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  Ports			  [2, 1]
+	  Position		  [485, 260, 515, 295]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add3"
+	  Ports			  [2, 1]
+	  Position		  [355, 301, 385, 334]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add4"
+	  Ports			  [3, 1]
+	  Position		  [480, 428, 510, 462]
+	  Inputs		  "+--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide1"
+	  Ports			  [2, 1]
+	  Position		  [750, 177, 780, 208]
+	  Inputs		  "*/"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1]
+	  Position		  [560, 100, 590, 130]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Ports			  [1, 1]
+	  Position		  [555, 265, 585, 295]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Ports			  [1, 1]
+	  Position		  [565, 430, 595, 460]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "P4"
+	  Ports			  [2, 1]
+	  Position		  [257, 215, 288, 245]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [370, 142, 400, 173]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [410, 232, 440, 263]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [420, 312, 450, 343]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [370, 52, 400, 83]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  Ports			  [2, 1]
+	  Position		  [375, 472, 405, 503]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda51"
+	  Position		  [760, 108, 790, 122]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda52"
+	  Position		  [685, 273, 715, 287]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda53"
+	  Position		  [670, 438, 700, 452]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Eta51"
+	  Position		  [830, 188, 860, 202]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K13"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "Add1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "P4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 85; -260, 0]
+	    Branch {
+	      Points		      [0, 40]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -35]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "P4"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [125, 0]
+	    Branch {
+	      DstBlock		      "Lambda51"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Divide1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K21"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Add3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -235]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K22"
+	  SrcPort		  1
+	  Points		  [0, -20]
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add3"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 85; -225, 0]
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -250; -275, 0]
+	    DstBlock		    "Product3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Lambda52"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add4"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K31"
+	  SrcPort		  1
+	  DstBlock		  "Product4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P4"
+	  SrcPort		  1
+	  Points		  [0, 185]
+	  DstBlock		  "Add4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -35]
+	  Branch {
+	    Points		    [-335, 0; 0, -335]
+	    DstBlock		    "Add"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Add4"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [40, 0; -10, 0]
+	  Branch {
+	    Points		    [0, 5; 0, 75; -270, 0]
+	    DstBlock		    "Product4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Lambda53"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 30]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V1"
+	  SrcPort		  1
+	  DstBlock		  "Divide1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "X3"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, 0]
+	  Branch {
+	    Points		    [0, -335]
+	    DstBlock		    "Add"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 0]
+	    DstBlock		    "Add4"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "Divide1"
+	  SrcPort		  1
+	  DstBlock		  "Eta51"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -45]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sensitivity V1"
+      Ports		      [7, 4]
+      Position		      [246, 370, 394, 465]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Sensitivity V1"
+	Location		[250, 76, 1216, 581]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V1"
+	  Position		  [560, 598, 590, 612]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K12"
+	  Position		  [165, 133, 195, 147]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K21"
+	  Position		  [95, 303, 125, 317]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K13"
+	  Position		  [230, 173, 260, 187]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K31"
+	  Position		  [290, 473, 320, 487]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K22"
+	  Position		  [295, 338, 325, 352]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "X1"
+	  Position		  [555, 643, 585, 657]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [3, 1]
+	  Position		  [510, 91, 540, 139]
+	  Inputs		  "+++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [2, 1]
+	  Position		  [305, 131, 335, 164]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  Ports			  [2, 1]
+	  Position		  [490, 241, 520, 274]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add3"
+	  Ports			  [2, 1]
+	  Position		  [355, 301, 385, 334]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add4"
+	  Ports			  [2, 1]
+	  Position		  [480, 431, 510, 464]
+	  Inputs		  "+-"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add5"
+	  Ports			  [2, 1]
+	  Position		  [830, 531, 860, 564]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  Ports			  [2, 1]
+	  Position		  [750, 597, 780, 628]
+	  Inputs		  "/*"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide1"
+	  Ports			  [2, 1]
+	  Position		  [750, 522, 780, 553]
+	  Inputs		  "*/"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Fcn"
+	  Position		  [620, 590, 680, 620]
+	  Expr			  "u^2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [890, 535, 920, 565]
+	  Gain			  "1e4"
+	  ParameterDataTypeMode	  "Inherit via internal rule"
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1]
+	  Position		  [560, 100, 590, 130]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Ports			  [1, 1]
+	  Position		  [560, 245, 590, 275]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Ports			  [1, 1]
+	  Position		  [565, 435, 595, 465]
+	  IgnoreLimit		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "X3"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "P4"
+	  Ports			  [2, 1]
+	  Position		  [257, 215, 288, 245]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [370, 142, 400, 173]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [410, 232, 440, 263]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [420, 312, 450, 343]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [370, 52, 400, 83]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  Ports			  [2, 1]
+	  Position		  [375, 472, 405, 503]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda11"
+	  Position		  [760, 108, 790, 122]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda12"
+	  Position		  [685, 253, 715, 267]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Lambda13"
+	  Position		  [670, 443, 700, 457]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Eta11"
+	  Position		  [950, 543, 980, 557]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K13"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "Add1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "P4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 85; -260, 0]
+	    Branch {
+	      Points		      [0, 40]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -35]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "P4"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [125, 0]
+	    Branch {
+	      DstBlock		      "Lambda11"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Divide1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K21"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Add3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -235]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K22"
+	  SrcPort		  1
+	  Points		  [0, -20]
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add3"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, 105; -225, 0]
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -230; -275, 0]
+	    DstBlock		    "Product3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Lambda12"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -65]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -30]
+	  DstBlock		  "Add"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Add4"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K31"
+	  SrcPort		  1
+	  DstBlock		  "Product4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P4"
+	  SrcPort		  1
+	  Points		  [0, 190]
+	  DstBlock		  "Add4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -35]
+	  Branch {
+	    DstBlock		    "Add4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [-355, 0; 0, -340]
+	    DstBlock		    "Add"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "X3"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [-10, 0; 0, 75; -270, 0]
+	    DstBlock		    "Product4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Lambda13"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 30]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "V1"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Fcn"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Divide1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "X1"
+	  SrcPort		  1
+	  Points		  [145, 0]
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Fcn"
+	  SrcPort		  1
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -60]
+	  DstBlock		  "Add5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Divide1"
+	  SrcPort		  1
+	  DstBlock		  "Add5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Add5"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Eta11"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Sensitivity X1"
+      Ports		      [1]
+      Position		      [65, 494, 95, 526]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [201, 145, 533, 459]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Sensitivity X2"
+      Ports		      [1]
+      Position		      [65, 579, 95, 611]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [295, 187, 627, 501]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Sensitivity X3"
+      Ports		      [1]
+      Position		      [65, 664, 95, 696]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [47, 306, 379, 620]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Sensitivity X4"
+      Ports		      [1]
+      Position		      [40, 419, 70, 451]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [201, 145, 945, 459]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Sensitivity Y1"
+      Ports		      [1]
+      Position		      [65, 749, 95, 781]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [197, 74, 537, 463]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      SaveName		      "ScopeData5"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Subsystem"
+      Ports		      [7, 4]
+      Position		      [101, 215, 249, 310]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Subsystem"
+	Location		[260, 68, 1217, 654]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "V1"
+	  Position		  [660, 68, 690, 82]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K12"
+	  Position		  [165, 133, 195, 147]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K21"
+	  Position		  [95, 303, 125, 317]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K13"
+	  Position		  [230, 173, 260, 187]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K31"
+	  Position		  [290, 473, 320, 487]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "K22"
+	  Position		  [295, 338, 325, 352]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "u"
+	  Position		  [450, 158, 480, 172]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add"
+	  Ports			  [4, 1]
+	  Position		  [510, 99, 540, 131]
+	  Inputs		  "++++"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [2, 1]
+	  Position		  [305, 131, 335, 164]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add2"
+	  Ports			  [2, 1]
+	  Position		  [490, 241, 520, 274]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add3"
+	  Ports			  [2, 1]
+	  Position		  [355, 301, 385, 334]
+	  Inputs		  "--"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add4"
+	  Ports			  [2, 1]
+	  Position		  [480, 431, 510, 464]
+	  Inputs		  "+-"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Divide"
+	  Ports			  [2, 1]
+	  Position		  [725, 92, 755, 123]
+	  Inputs		  "/*"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1]
+	  Position		  [560, 100, 590, 130]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Ports			  [1, 1]
+	  Position		  [560, 245, 590, 275]
+	  IgnoreLimit		  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Ports			  [1, 1]
+	  Position		  [565, 435, 595, 465]
+	  IgnoreLimit		  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "X3"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "P4"
+	  Ports			  [2, 1]
+	  Position		  [257, 215, 288, 245]
+	  Orientation		  "down"
+	  NamePlacement		  "alternate"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [370, 142, 400, 173]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  Ports			  [2, 1]
+	  Position		  [410, 232, 440, 263]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  Ports			  [2, 1]
+	  Position		  [420, 312, 450, 343]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product3"
+	  Ports			  [2, 1]
+	  Position		  [370, 67, 400, 98]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product4"
+	  Ports			  [2, 1]
+	  Position		  [375, 472, 405, 503]
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X1"
+	  Position		  [675, 133, 705, 147]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X2"
+	  Position		  [685, 253, 715, 267]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "X3"
+	  Position		  [670, 443, 700, 457]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Y1"
+	  Position		  [795, 103, 825, 117]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Add"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K12"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Add1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 115]
+	    DstBlock		    "Product1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K13"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "Add1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "P4"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 85; -260, 0]
+	    Branch {
+	      Points		      [0, 40]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -35]
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "P4"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [50, 0]
+	    Branch {
+	      DstBlock		      "Divide"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "X1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Add2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K21"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Add3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -220]
+	    DstBlock		    "Product3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "K22"
+	  SrcPort		  1
+	  Points		  [0, -20]
+	  DstBlock		  "Add3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add3"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, 105; -225, 0]
+	    DstBlock		    "Product2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, -200; -275, 0]
+	    DstBlock		    "Product3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "X2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -65]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -40]
+	  DstBlock		  "Add"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Add4"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "K31"
+	  SrcPort		  1
+	  DstBlock		  "Product4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "P4"
+	  SrcPort		  1
+	  Points		  [0, 190]
+	  DstBlock		  "Add4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product4"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -35]
+	  Branch {
+	    DstBlock		    "Add4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [-355, 0; 0, -345]
+	    DstBlock		    "Add"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "X3"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [-10, 0; 0, 75; -270, 0]
+	    DstBlock		    "Product4"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "X3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Product3"
+	  SrcPort		  1
+	  Points		  [45, 0; 0, 15]
+	  DstBlock		  "Add"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "u"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Add"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "V1"
+	  SrcPort		  1
+	  Points		  [0, 5; 10, 0; 0, 20]
+	  DstBlock		  "Divide"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Divide"
+	  SrcPort		  1
+	  DstBlock		  "Y1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "V1"
+      Position		      [88, 50, 142, 70]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      Value		      "7748.6831"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "u"
+      Tag		      "STV Subsys"
+      Ports		      [0, 1]
+      Position		      [560, 50, 600, 85]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      CopyFcn		      "sigbuilder_block('copy');"
+      DeleteFcn		      "sigbuilder_block('delete');"
+      LoadFcn		      "sigbuilder_block('load');"
+      ModelCloseFcn	      "sigbuilder_block('modelClose');"
+      PreSaveFcn	      "sigbuilder_block('preSave');"
+      StartFcn		      "sigbuilder_block('start');"
+      StopFcn		      "sigbuilder_block('stop');"
+      NameChangeFcn	      "sigbuilder_block('namechange');"
+      ClipboardFcn	      "sigbuilder_block('clipboard');"
+      OpenFcn		      "sigbuilder_block('open',[406.5 183 550.5 363.75"
+" ]);"
+      CloseFcn		      "sigbuilder_block('close');"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "Sigbuilder block"
+      MaskDescription	      "Sigbuilder GUI"
+      MaskInitialization      "if ~strcmp(get_param(bdroot(gcbh),'SimulationSt"
+"atus'),'stopped') tuvar = sigbuilder_block('maskInit'); end"
+      MaskDisplay	      "plot(0,0,100,100,[10,10,40,40,10],[80,20,20,80,"
+"80],[40,10],[50,50], [40,27,10],[65,72,56],[40,25,25,10],[28,28,43,43]);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "port"
+      MaskIconUnits	      "autoscale"
+      MaskCapabilities	      "slmaskedcaps(gcbh)"
+      System {
+	Name			"u"
+	Location		[480, 85, 980, 386]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Tag			  "STV Demux"
+	  Ports			  [1, 1]
+	  Position		  [150, 34, 160, 606]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  FromWorkspace
+	  Name			  "FromWs"
+	  Tag			  "STV FromWs"
+	  Position		  [30, 300, 115, 350]
+	  VariableName		  "tuvar"
+	  SampleTime		  "0"
+	  ZeroCross		  on
+	  SigBuilderData	  "DataTag0"
+	  VnvData		  "DataTag1"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  Tag			  "STV Outport"
+	  Position		  [280, 30, 300, 40]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, -285]
+	  DstBlock		  "u"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FromWs"
+	  SrcPort		  1
+	  Points		  [5, 0; 0, -5]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "V1"
+      SrcPort		      1
+      Points		      [0, 110]
+      Branch {
+	DstBlock		"Subsystem"
+	DstPort			1
+      }
+      Branch {
+	Points			[145, 0]
+	Branch {
+	  DstBlock		  "Sensitivity V1"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [215, 0]
+	  Branch {
+	    DstBlock		    "Sensitivity K12"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [215, 0]
+	    Branch {
+	      DstBlock		      "Sensitivity K21"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [215, 0]
+	      Branch {
+		DstBlock		"Sensitivity K13"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[215, 0]
+		Branch {
+		  DstBlock		  "Sensitivity K31"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [220, 0]
+		  DstBlock		  "Sensitivity K22"
+		  DstPort		  1
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "K12"
+      SrcPort		      1
+      Points		      [-65, 0; 0, 90]
+      Branch {
+	DstBlock		"Subsystem"
+	DstPort			2
+      }
+      Branch {
+	Points			[140, 0; 5, 0]
+	Branch {
+	  DstBlock		  "Sensitivity V1"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [215, 0]
+	  Branch {
+	    DstBlock		    "Sensitivity K12"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [215, 0]
+	    Branch {
+	      DstBlock		      "Sensitivity K21"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [215, 0]
+	      Branch {
+		DstBlock		"Sensitivity K13"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[215, 0]
+		Branch {
+		  DstBlock		  "Sensitivity K31"
+		  DstPort		  2
+		}
+		Branch {
+		  Points		  [220, 0]
+		  DstBlock		  "Sensitivity K22"
+		  DstPort		  2
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "K21"
+      SrcPort		      1
+      Points		      [0, 5; -130, 0; 0, 75]
+      Branch {
+	DstBlock		"Subsystem"
+	DstPort			3
+      }
+      Branch {
+	Points			[145, 0]
+	Branch {
+	  DstBlock		  "Sensitivity V1"
+	  DstPort		  3
+	}
+	Branch {
+	  Points		  [215, 0]
+	  Branch {
+	    DstBlock		    "Sensitivity K12"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [215, 0]
+	    Branch {
+	      DstBlock		      "Sensitivity K21"
+	      DstPort		      3
+	    }
+	    Branch {
+	      Points		      [215, 0]
+	      Branch {
+		DstBlock		"Sensitivity K13"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[215, 0]
+		Branch {
+		  DstBlock		  "Sensitivity K31"
+		  DstPort		  3
+		}
+		Branch {
+		  Points		  [220, 0]
+		  DstBlock		  "Sensitivity K22"
+		  DstPort		  3
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "K13"
+      SrcPort		      1
+      Points		      [0, 10; -195, 0; 0, 60]
+      Branch {
+	DstBlock		"Subsystem"
+	DstPort			4
+      }
+      Branch {
+	Points			[145, 0]
+	Branch {
+	  DstBlock		  "Sensitivity V1"
+	  DstPort		  4
+	}
+	Branch {
+	  Points		  [215, 0]
+	  Branch {
+	    DstBlock		    "Sensitivity K12"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [215, 0]
+	    Branch {
+	      DstBlock		      "Sensitivity K21"
+	      DstPort		      4
+	    }
+	    Branch {
+	      Points		      [215, 0]
+	      Branch {
+		DstBlock		"Sensitivity K13"
+		DstPort			4
+	      }
+	      Branch {
+		Points			[215, 0]
+		Branch {
+		  DstBlock		  "Sensitivity K31"
+		  DstPort		  4
+		}
+		Branch {
+		  Points		  [220, 0]
+		  DstBlock		  "Sensitivity K22"
+		  DstPort		  4
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "K31"
+      SrcPort		      1
+      Points		      [0, 20; -260, 0; 0, 40]
+      Branch {
+	DstBlock		"Subsystem"
+	DstPort			5
+      }
+      Branch {
+	Points			[145, 0]
+	Branch {
+	  DstBlock		  "Sensitivity V1"
+	  DstPort		  5
+	}
+	Branch {
+	  Points		  [215, 0]
+	  Branch {
+	    DstBlock		    "Sensitivity K12"
+	    DstPort		    5
+	  }
+	  Branch {
+	    Points		    [215, 0]
+	    Branch {
+	      DstBlock		      "Sensitivity K21"
+	      DstPort		      5
+	    }
+	    Branch {
+	      Points		      [215, 0]
+	      Branch {
+		DstBlock		"Sensitivity K13"
+		DstPort			5
+	      }
+	      Branch {
+		Points			[215, 0]
+		Branch {
+		  DstBlock		  "Sensitivity K31"
+		  DstPort		  5
+		}
+		Branch {
+		  Points		  [220, 0]
+		  DstBlock		  "Sensitivity K22"
+		  DstPort		  5
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "K22"
+      SrcPort		      1
+      Points		      [0, 30; -310, 0; 0, 20]
+      Branch {
+	DstBlock		"Subsystem"
+	DstPort			6
+      }
+      Branch {
+	Points			[145, 0]
+	Branch {
+	  DstBlock		  "Sensitivity V1"
+	  DstPort		  6
+	}
+	Branch {
+	  Points		  [215, 0]
+	  Branch {
+	    DstBlock		    "Sensitivity K12"
+	    DstPort		    6
+	  }
+	  Branch {
+	    Points		    [215, 0]
+	    Branch {
+	      DstBlock		      "Sensitivity K21"
+	      DstPort		      6
+	    }
+	    Branch {
+	      Points		      [215, 0]
+	      Branch {
+		DstBlock		"Sensitivity K13"
+		DstPort			6
+	      }
+	      Branch {
+		Points			[215, 0]
+		Branch {
+		  DstBlock		  "Sensitivity K31"
+		  DstPort		  6
+		}
+		Branch {
+		  Points		  [220, 0]
+		  DstBlock		  "Sensitivity K22"
+		  DstPort		  6
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "u"
+      SrcPort		      1
+      Points		      [0, 30; -345, 0]
+      DstBlock		      "Subsystem"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "Subsystem"
+      SrcPort		      1
+      Points		      [0, 25; 255, 0]
+      Branch {
+	DstBlock		"Sensitivity V1"
+	DstPort			7
+      }
+      Branch {
+	Points			[215, 0]
+	Branch {
+	  DstBlock		  "Sensitivity K12"
+	  DstPort		  7
+	}
+	Branch {
+	  Points		  [430, 0]
+	  DstBlock		  "Sensitivity K13"
+	  DstPort		  7
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Subsystem"
+      SrcPort		      2
+      Points		      [0, 15; 650, 0]
+      Branch {
+	DstBlock		"Sensitivity K21"
+	DstPort			7
+      }
+      Branch {
+	Points			[650, 0]
+	DstBlock		"Sensitivity K22"
+	DstPort			7
+      }
+    }
+    Line {
+      SrcBlock		      "Subsystem"
+      SrcPort		      3
+      Points		      [0, 5; 1045, 0]
+      DstBlock		      "Sensitivity K31"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "Sensitivity V1"
+      SrcPort		      1
+      Points		      [0, 15]
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sensitivity K12"
+      SrcPort		      1
+      Points		      [0, 25]
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sensitivity K21"
+      SrcPort		      1
+      Points		      [0, 35]
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Sensitivity K13"
+      SrcPort		      1
+      Points		      [0, 45]
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Sensitivity K31"
+      SrcPort		      1
+      Points		      [0, 55]
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Sensitivity K22"
+      SrcPort		      1
+      Points		      [0, 65]
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [-35, 0]
+      Branch {
+	DstBlock		"Sensitivity X1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Mux4"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [-25, 0]
+      Branch {
+	DstBlock		"Sensitivity X2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -155]
+	DstBlock		"Mux4"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "Sensitivity V1"
+      SrcPort		      2
+      Points		      [0, 100]
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sensitivity K12"
+      SrcPort		      2
+      Points		      [0, 110]
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sensitivity K21"
+      SrcPort		      2
+      Points		      [0, 120]
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Sensitivity K13"
+      SrcPort		      2
+      Points		      [0, 130]
+      DstBlock		      "Mux1"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Sensitivity K31"
+      SrcPort		      2
+      Points		      [0, 140]
+      DstBlock		      "Mux1"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Sensitivity K22"
+      SrcPort		      2
+      Points		      [0, 150]
+      DstBlock		      "Mux1"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      Points		      [-15, 0]
+      Branch {
+	DstBlock		"Sensitivity X3"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -260]
+	DstBlock		"Mux4"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Sensitivity V1"
+      SrcPort		      3
+      Points		      [0, 185]
+      DstBlock		      "Mux2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sensitivity K12"
+      SrcPort		      3
+      Points		      [0, 195]
+      DstBlock		      "Mux2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sensitivity K21"
+      SrcPort		      3
+      Points		      [0, 205]
+      DstBlock		      "Mux2"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Sensitivity K13"
+      SrcPort		      3
+      Points		      [0, 215]
+      DstBlock		      "Mux2"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Sensitivity K31"
+      SrcPort		      3
+      Points		      [0, 225]
+      DstBlock		      "Mux2"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Sensitivity K22"
+      SrcPort		      3
+      Points		      [0, 235]
+      DstBlock		      "Mux2"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Mux3"
+      SrcPort		      1
+      Points		      [-5, 0]
+      Branch {
+	Points			[0, -365]
+	DstBlock		"Mux4"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Sensitivity Y1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sensitivity V1"
+      SrcPort		      4
+      Points		      [0, 270]
+      DstBlock		      "Mux3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sensitivity K12"
+      SrcPort		      4
+      Points		      [0, 280]
+      DstBlock		      "Mux3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sensitivity K21"
+      SrcPort		      4
+      Points		      [0, 290]
+      DstBlock		      "Mux3"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Sensitivity K13"
+      SrcPort		      4
+      Points		      [0, 300]
+      DstBlock		      "Mux3"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Sensitivity K31"
+      SrcPort		      4
+      Points		      [0, 310]
+      DstBlock		      "Mux3"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Sensitivity K22"
+      SrcPort		      4
+      Points		      [0, 320]
+      DstBlock		      "Mux3"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Mux4"
+      SrcPort		      1
+      Points		      [0, 5]
+      DstBlock		      "Sensitivity X4"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    R ,   8    (     @         %    "
+"\"     $    !     0         %  0 $0    $   #,    =F5R:69Y0FQK4&%T:',   !V97)I"
+"9GE\";&M(86YD;&5S '9N=DUG<DED>           86-T:79E1W)O=7        !R97%$:7-P4')C"
+";G0      &)L:T1I<W!-;V1E        9W)O=7!#;G0           !G<F]U<%)E<4-N=        "
+"&=R;W5P1$]/4E-I9       ;6]D96Q(              !B;&]C:T@              &]V97)I9&"
+"53971T:6YG<P        X    P    !@    @    &          4    (               !   "
+"       D         #@   #     &    \"     8         !0    @               $    "
+"     \"0         .    ,     8    (    !@         %    \"                0    "
+"     )          X    X    !@    @    &          4    (     0    $    !       "
+"   D    (            \\#\\.    ,     8    (    !@         %    \"            "
+"    0         )          X    P    !@    @    &          4    (              "
+" !          D         #@   #@    &    \"     8         !0    @    !     0    "
+"$         \"0    @           #P/PX    P    !@    @    &          4    (      "
+"         !          D         #@   #     &    \"     8         !0    @       "
+"        $         \"0         .    .     8    (    !@         %    \"     $  "
+"  !     0         )    \"            @A #@   #@    &    \"     8         !0  "
+"  @    !     0    $         \"0    @       \"@  R>0 X    P    !@    @    &   "
+"       4    (               !          D         "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    \" P   8    (     @         %    "
+"\"     $    !     0         %  0 %@    $   \":    9W)I9%-E='1I;F<            "
+"  &-H86YN96QS                  !A>&5S                        8V]M;6]N        "
+"             &1A=&%3970                   !D871A4V5T261X                :7-69"
+"7)I9FEC871I;VY6:7-I8FQE          X    P    !@    @    $          4    (     0"
+"    (    !         !   @!O;@  #@   , $   &    \"     (         !0    @    !  "
+"   0    $         !0 $  H    !    @@   'A$871A      !Y1&%T80      <W1E<%@    "
+"  '-T97!9      !Y36EN        >4UA>        &-O;&]R      !L:6YE4W1Y;&4 ;&EN95=I"
+"9'1H &QA8F5L      !O=71);F1E>   86QL6$1A=&$  &%L;%E$871A           .    4    "
+" 8    (    !@         %    \"     $    $     0         )    (                "
+"       \\#\\       #P/P       $) #@   %     &    \"     8         !0    @    "
+"!    !     $         \"0   \"           &KX0       :OA                       "
+"X    X    !@    @    &          4    (     0    $    !          D    (       "
+"        .    .     8    (    !@         %    \"     $    !     0         )   "
+" \"               #@   #@    &    \"     8         !0    @    !     0    $   "
+"      \"0    @           #P_PX    X    !@    @    &          4    (     0    "
+"$    !          D    (            \\'\\.    2     8    (    !@         %    "
+"\"     $    #     0         )    &    $(^Z-FL^NH_                      X    P"
+"    !@    @    $          4    (     0    $    !         !   0 M    #@   #@  "
+"  &    \"     8         !0    @    !     0    $         \"0    @           #X"
+"/PX    P    !@    @    $          4    (     0    $    !         !   0!U    #"
+"@   #@    &    \"     8         !0    @    !     0    $         \"0    @     "
+"      #P/PX   \"     !@    @    !          4    (     0    $    !          X "
+"  !0    !@    @    &          4    (     0    0    !          D    @         "
+"             #P/P       / _        0D .    @     8    (     0         %    \""
+"     $    !     0         .    4     8    (    !@         %    \"     $    $ "
+"    0         )    (           :OA       !J^$                      #@   + !  "
+" &    \"     (         !0    @    !     0    $         !0 $  L    !    -P   &"
+"-H86YN96QS    >4QI;0        !L86)E;%!O<P   &QA8F5L2       ;&%B96Q0871C:   #@ "
+"  #@    &    \"     8         !0    @    !     0    $         \"0    @       "
+"    #P/PX   !     !@    @    &          4    (     0    (    !          D    "
+"0          \"(P\\       -OZ0 X    P    !@    @    $          4    (     0    "
+"(    !         !   @!43   #@   #@    &    \"     8         !0    @    !     0"
+"    $         \"0    @        PJ*&@0 X    X    !@    @    &          4    (  "
+"   0    $    !          D    (          %<GD .    : (   8    (     @         "
+"%    \"     $    !     0         %  0 #@    $   !B    9&ES<%1I;64       !D:7-"
+"P36]D90       &UI;E1I;64         ;6%X5&EM90        !A9G1E<D9I;F%L4W1R '-A;7!L"
+"951I;64     >F5R;T-R;W-S               .    0     8    (    !@         %    "
+"\"     $    \"     0         )    $                       0D .    .     8    "
+"(    !@         %    \"     $    !     0         )    \"            / _#@   #"
+"@    &    \"     8         !0    @    !     0    $         \"0    @          "
+"     X    X    !@    @    &          4    (     0    $    !          D    (  "
+"          0D .    0     8    (    !          %    \"     $    +     0        "
+" 0    \"P   $5X=')A<&]L871E       .    .     8    (    !@         %    \"    "
+" $    !     0         )    \"               #@   #     &    \"     0         "
+"!0    @    !     @    $         $  \" &]N   .    @ $   8    (     @         %"
+"    \"     $    !     0         %  0 #@    $    X    86-T:79E1&ES<$ED> !T:6UE"
+"4F%N9V4      &YA;64             9&ES<&QA>5)A;F=E   .    .     8    (    !@   "
+"      %    \"     $    !     0         )    \"            / _#@   $     &    "
+"\"     8         !0    @    !     @    $         \"0   !                     "
+"  $) #@   #@    &    \"     0         !0    @    !    !P    $         $     <"
+"   !'<F]U<\" Q  X   !     !@    @    &          4    (     0    (    !       "
+"   D    0                      !\"0 X    X    !@    @    &          4    (   "
+"  0    $    !          D    (            \\#\\.    .     8    (    !@        "
+" %    \"     $    !     0         )    \"               "
+  }
+}

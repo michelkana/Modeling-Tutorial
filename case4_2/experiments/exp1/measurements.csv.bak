@@ -1,0 +1,16 @@
+[Name]
+blood concentration
+
+[Notes]
+
+[Components]
+time,Y1
+
+[Componentnotes]
+
+[Values]
+0.000000,20
+2.000000,10
+6.000000,3
+10.000000,2
+20.000000,0.1

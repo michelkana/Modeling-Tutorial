@@ -1,0 +1,3 @@
+Thiamine transport modeling project.
+Uptake of thiamine into the cell, switch to de-novo synthesis of ThMP
+in case of thiamine limitation in medium. Etc. 

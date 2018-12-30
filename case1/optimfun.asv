@@ -1,0 +1,24 @@
+function F = optimfun(param, b, modelName)
+
+set_param([modelName '/V1'], 'Gain', num2str(param(1)));
+set_param([modelName '/K11'], 'Gain', num2str(param(2)));
+
+[t, x, simulatedData] =sim(modelName, 0:1/fs:length(I_measured)/fs-1/fs);
+
+% size(simulatedData)
+% plot(I_measured)
+I_simulated = simulatedData(:, 2);
+F = I_measured - I_simulated;
+
+figure(1);
+subplot 212;
+cla;
+plot(I_measured, 'r.');
+hold on;
+plot(I_simulated);
+hold off;
+ylim([min(I_measured) max(I_measured)]);
+title(['Optimization result: step=' num2str(numStep) '; resnorm=' num2str(sum(F.^2))]);
+% refreshdata;
+numStep = numStep+1;
+pause(0.3);

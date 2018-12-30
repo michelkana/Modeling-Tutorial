@@ -1,0 +1,20 @@
+********** EXPERIMENT NAME
+example experiment
+
+********** EXPERIMENT NOTES
+just an example experiment 
+
+********** EXPERIMENT INITIAL PARAMETER AND STATE SETTINGS
+
+
+********** EXPERIMENT PARAMETER CHANGES
+% In this section parameter changes can be defined that are evaluated during
+% the merged models evaluation
+
+
+
+********** EXPERIMENT STATE CHANGES
+% State changes in the experiment description can only be done at certain 
+% time points yet. This will probably also change in a coming revision.
+
+
